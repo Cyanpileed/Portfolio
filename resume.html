@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Open navigation" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-tabs" id="navTabs">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const navTabs = document.getElementById('navTabs');
+    navToggle.addEventListener('click', () => {
+      navTabs.classList.toggle('open');
+    });
+    navToggle.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        navTabs.classList.toggle('open');
+      }
+    });
+    navTabs.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 700) navTabs.classList.remove('open');
+      });
+    });
+  </script>
+  <h1>Resume</h1>
+  <p>This is the Resume page.</p>
+</body>
+</html>
