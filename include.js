@@ -5,7 +5,7 @@ async function loadPartial(id, file) {
 
 Promise.all([
   loadPartial('site-header', 'partials/header.html'),
-  //loadPartial('site-footer', 'partials/footer.html'),
+  loadPartial('site-footer', 'partials/footer.html'),
 ]).then(() => {
   const navToggle = document.getElementById('navToggle');
   const navTabs = document.getElementById('navTabs');
