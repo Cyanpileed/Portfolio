@@ -1,96 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div id="site-header"></div>
   <script src="include.js"></script>
 
   <section class="experience-list" aria-label="Internship experience list">
 
-      <!-- Buttons -->
-      <div class="viewer-controls" style="margin: 1rem 0; display: flex; gap: 0.5rem; align-items: center;">
-        <span>Language:</span>
-        <button class="lang-btn button active" data-lang="en">English</button>
-        <button class="lang-btn button" data-lang="fr">Français</button>
-      </div>
+    <!-- Category Switcher Buttons -->
+    <div class="viewer-controls" style="margin: 1rem 0 1.5rem 0; display: flex; gap: 0.5rem; align-items: center;">
+      <button class="cat-btn button active" data-category="engineering">Engineering Experience</button>
+      <button class="cat-btn button" data-category="side-gigs">Side Gigs</button>
+    </div>
 
-    <article class="experience-item">
-      <a href="https://icube.unistra.fr/" target="_blank">
-        <img class="company-logo" src="https://www.biomecanique.org/images/gmapfp/460__46icube.png" alt="ICube logo">
-      </a>
-      
-      <div class="experience-content">
-        <h3 class="role">Robotics Engineering Intern, Master's Thesis</h3>
-        <div class="meta"><strong>ICube Laboratory UMR 7357, Strasbourg</strong> &middot; 26 Weeks (2026)</div>
-        <p>Design and control of a robotic indoor blimp platform and it's toolchain for generic purposes (e.g., research, video capture, exploration).</p>
-        <ul>
-          <li><strong>Specifications definition: </strong> Research oriented state of the art and documentation</li>
-          <li><strong>Software stack selection: </strong> Choice of appropriate technologies and frameworks given the requirements.</li>
-          <li><strong>Firmware programming: </strong> Adaptation of the PX4 autopilot for the blimp platform.</li>
-          <li><strong>Digital twin for simulation: </strong> Creation of a virtual model for testing and validation using PX4 SITL and Gazebo.</li>
-        </ul>
-      </div>
-    </article>
+    <!-- 1. Engineering Experience (Shown by default) -->
+    <div class="category-block cat-engineering">
+      <article class="experience-item">
+        <a href="https://petrokimia-gresik.com/?hl=en" target="_blank">
+          <img class="company-logo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Petrokimia_Gresik_logo.svg/960px-Petrokimia_Gresik_logo.svg.png" alt="Petrokimia Gresik logo">
+        </a>
 
-    <article class="experience-item">
-      <a href="https://www.actemium.ch/" target="_blank">
-        <img class="company-logo" src="https://www.actemium.fr/app/uploads/sites/85/2022/11/logo-actemium.png" alt="Actemium logo">
-      </a>
-      <div class="experience-content">
-        <h3 class="role">Automation Engineering Intern</h3>
-        <div class="meta"><strong>Actemium Switzerland AG, Arlesheim</strong> &middot; 9 Weeks (2025)</div>
-        <p>Design and production of a cocktail machine within a company developing an deploying industrial automation systems.</p>
-        <ul>
-          <li><strong>Specifications definition:</strong> State of the art and architecture research.</li>
-          <li><strong>Component selection: </strong> PLC, I/O Systems and pumps.</li>
-          <li><strong>PLC programming: </strong> Codesys and TIA Portal using IEC 61131-3 languages.</li>
-          <li><strong>HMI design: </strong> Codesys.</li>
-        </ul>
-      </div>
-    </article>
+        <div class="experience-content">
+          <h3 class="role">Mechanical Engineering Intern (Static Equipment Inspection)</h3>
+          <div class="meta"><strong>PT. Petrokimia Gresik, Gresik, Indonesia</strong> &middot; 26 Weeks (2026)</div>
+          <p>Internship in the static equipment inspection team of a petrochemical plant, supporting turnaround and 
+            routine inspection of vessels, heat exchangers, tanks, and piping.</p>
+          <ul>
+            <li><strong>NDT support: </strong> PT, MT, hydro/pressure, VT/UT corrosion, weld, gasket, and insulation/CUI surveys and leak tests during Turnaround.</li>
+            <li><strong>Measurement: </strong> Basic shell thickness checks per ASME B31.3 under supervision, using a thermal imager, borescope, crack-depth gauge, and UT thickness meter.</li>
+            <li><strong>CAD digitization: </strong> Converted paper piping isometrics for Syngas and Process Gas lines into AutoCAD, making pipelines with potential HTHA risk easier to identify.</li>
+            <li><strong>Reporting: </strong> Issues log with corrective actions; internship report defended on nitriding of the Johnson screen in the ammonia converter.</li>
+          </ul>
+        </div>
+      </article>
 
-    <article class="experience-item">
-      <a href="https://www.etavis.ch/" target="_blank">
-        <img class="company-logo" src="https://www.etavis.ch/app/uploads/sites/445/2022/12/Etavis_Logo_130x90.png" alt="Etavis logo">
-      </a>
-      <div class="experience-content">
-        <h3 class="role">Electrician, Internship and Summer Job </h3>
-        <div class="meta"><strong>ETAVIS K+S AG, Basel</strong> &middot; 8 + 3 Weeks (2021)</div>
-        <p>Internship followed by a summer job within a company installing industrial electrical systems:</p>
-        <ul>
-          <li>Laying of electrical cables according to plans and specifications.</li>
-          <li>Assembly of electrical junction boxes following the provided plans.</li>
-          <li>Preparation of infrastructure for cable tray installation.</li>
-          <li>Installation and connection of pneumatic lines.</li>
-        </ul>
-      </div>
-    </article>
-  </section>
+      <article class="experience-item">
+        <a href="https://mesin.fti.trisakti.ac.id/" target="_blank">
+          <img class="company-logo" src="https://ekstensi-mesin.fti.trisakti.ac.id/wp-content/uploads/sites/42/2026/09/2026-07-01_teknik-mesin-fti-universitas-trisakti_logo-tm_color2white_500px_final.gif"
+            alt="Department of Mechanical Engineering Universitas Trisakti logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Teaching Assistant, CAD/CAM Practical Course</h3>
+          <div class="meta"><strong>Universitas Trisakti, Dept. of Mechanical Engineering, Jakarta</strong> &middot; 9 Weeks (2025)</div>
+          <p>Assisted in teaching and assessing students in CATIA V5, from basic tools to advanced objects.</p>
+          <ul>
+            <li><strong>CATIA V5:</strong> 3D part and assembly modelling, GD&T.</li>
+            <li><strong>Assessment: </strong> Supervised practical work and graded final projects.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <a href="https://mesin.fti.trisakti.ac.id/" target="_blank">
+          <img class="company-logo" src="https://ekstensi-mesin.fti.trisakti.ac.id/wp-content/uploads/sites/42/2026/09/2026-07-01_teknik-mesin-fti-universitas-trisakti_logo-tm_color2white_500px_final.gif"
+            alt="Department of Mechanical Engineering Universitas Trisakti logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Teaching Assistant, Mechanical Drawing Practical 1 & 2</h3>
+          <div class="meta"><strong>Universitas Trisakti, Dept. of Mechanical Engineering, Jakarta</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Led weekly three-hour sessions on technical drawing for the Class of 2023 and 2024.</p>
+          <ul>
+            <li><strong>Technical drawing</strong> Manual drafting, AutoCAD, and GD&T.</li>
+            <li><strong>Feedback: </strong> Individual feedback and one-on-one tutoring on each module exercise.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <a href="https://www.bosowasemen.co.id/" target="_blank">
+          <img class="company-logo" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Logo_Bosowa_Corp.jpg"
+            alt="Department of Mechanical Engineering Universitas Trisakti logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Maintenance Intern</h3>
+          <div class="meta"><strong>PT. Semen Bosowa Maros, Maros, Indonesia</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Internship in the maintenance department of a cement plant, assisting three maintenance engineers with routine machine inspections.</p>
+          <ul>
+            <li><strong>Maintenance</strong> leaning, worn-part replacement, and minor repairs on cement mill components.</li>
+            <li><strong>Data collection: </strong> Operational data to monitor machine performance.</li>
+            <li><strong>Case study: </strong> Replacing the bag filters of the mill dust collector (report defended).</li>
+          </ul>
+        </div>
+      </article>
+    </div> <!-- Closes cat-engineering -->
+
+
+    <!-- 2. Side Gigs (Hidden by default) -->
+    <div class="category-block cat-side-gigs" style="display: none;">
+      <article class="experience-item">
+        <a href="https://www.etavis.ch/" target="_blank">
+          <img class="company-logo" src="https://www.etavis.ch/app/uploads/sites/445/2022/12/Etavis_Logo_130x90.png"
+            alt="Etavis logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Owner & Business Manager </h3>
+          <div class="meta"><strong>DC Motor, Motorcycle Repair Shop, Tangerang</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Running a motorcycle repair shop.</p>
+          <ul>
+            <li>Workshop operations and customer service.</li>
+            <li>Inventory, logistics, and finances.</li>
+            <li>Digital content for customer communication and promotion.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <a href="https://outlier.ai/" target="_blank">
+          <img class="company-logo" src="https://rec-data.kalibrr.com/www.kalibrr.com/logos/FS4WXUD5UNED5QZXTE9GKTMSBLP6FMXTXN4788R6-66b3f7f1.png"
+            alt="Etavis logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Audio Annotator / AI Evaluator (Freelance)</h3>
+          <div class="meta"><strong>Outlier (Aether Project), Remote</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Evaluated AI voice agents through spoken English conversations.</p>
+          <ul>
+            <li>Compared two agents on accent handling, context, empathy, and memory.</li>
+            <li>Flagged failures to follow through on human safety.</li>
+            <li>Written justifications with timestamps.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <a href="https://boardicle.com/index.html#/" target="_blank">
+          <img class="company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxSKu7FufVUxTZJBgH2MISWdBPRAnlb356yLwWDw2FvPdlqcnnfAoS3vd&s=10"
+            alt="Etavis logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Part-Time English Teacher</h3>
+          <div class="meta"><strong>Boardicle (e-learning platform), Remote</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Taught English conversation and General English at levels A1–C1.</p>
+          <ul>
+            <li>Designed and delivered interactive lessons.</li>
+            <li>Provided feedback and assessed student progress.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <a href="https://www.deutschepost.de/en/home.html" target="_blank">
+          <img class="company-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg0csdxrfLzfwMRxNZ7-J-5OynipqKE_i3D9CuJio9qA&s=10"
+            alt="Etavis logo">
+        </a>
+        <div class="experience-content">
+          <h3 class="role">Warehouse Assistant (FerienJob)</h3>
+          <div class="meta"><strong>Deutsche Post DHL, Kitzingen, Germany</strong> &middot; 8 + 3 Weeks (2021)</div>
+          <p>Seasonal job at a loading dock during peak evening shifts (3–9 PM).</p>
+          <ul>
+            <li>Sorting and loading, in a team of 15.</li>
+            <li>Helped keep outbound deliveries on time and truck idle time under 2 hours.</li>
+            <li>Oriented new workers on dock safety procedures.</li>
+          </ul>
+        </div>
+      </article>
+    </div> <!-- Closes cat-side-gigs -->
+  </section> <!-- Closes experience-list section -->
+
   <footer class="site-footer">
     <p>© 2026 Angelique Christantyo &mdash; BEng Mechanical Engineering - Universitas Trisakti</p>
     <p>
       <a href="index.html" class="footer-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
         <span class="footer-link-text">Home</span>
       </a> |
       <a href="https://github.com/Cyanpileed" target="_blank" class="footer-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;">
+          <path
+            d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.18-1.1-1.5-1.1-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+        </svg>
         <span class="footer-link-text">GitHub</span>
       </a> |
       <a href="https://linkedin.com/in/edithdchrst/" target="_blank" class="footer-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z"/></svg>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;">
+          <path
+            d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" />
+        </svg>
         <span class="footer-link-text">LinkedIn</span>
       </a> |
       <a href="contact.html" class="footer-link">
-        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;"><path d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5h-13A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11zm-2.5-.5a.5.5 0 0 1 .5.5v.379l-8 5.333-8-5.333V6a.5.5 0 0 1 .5-.5h15zm.5 12a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V8.121l7.5 5 7.5-5V18z"/></svg>
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;">
+          <path
+            d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5h-13A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11zm-2.5-.5a.5.5 0 0 1 .5.5v.379l-8 5.333-8-5.333V6a.5.5 0 0 1 .5-.5h15zm.5 12a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V8.121l7.5 5 7.5-5V18z" />
+        </svg>
         <span class="footer-link-text">Contact</span>
       </a>
     </p>
   </footer>
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll('.cat-btn');
+      const blocks = document.querySelectorAll('.category-block');
+
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const selected = this.getAttribute('data-category');
+
+          // Hide all category blocks
+          blocks.forEach(block => {
+            block.style.display = 'none';
+          });
+
+          // Show the selected category block
+          const targetBlock = document.querySelector('.cat-' + selected);
+          if (targetBlock) {
+            targetBlock.style.display = 'block';
+          }
+
+          // Update active button styling
+          buttons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+    })();
+  </script>
 </body>
+
 </html>
