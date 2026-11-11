@@ -1,26 +1,29 @@
-name: Deploy to OVH
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-
-      - name: Deploy to OVH via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: www/     # OVH web root
-          local-dir: src/      # deploy *only* the contents of src/
-          exclude: |
-            **/.git*
-            **/.github*
-            README.md
+          path: './src'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
