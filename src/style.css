@@ -1013,13 +1013,13 @@ article.project .project-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
+  margin: 1rem auto;
   min-height: 160px;
-  width: 100vw;
-  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
   box-sizing: border-box;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
 }
 
 .site-header-text {
@@ -1030,7 +1030,7 @@ article.project .project-header {
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: min(100%, 42rem);
+  max-width: 42rem;
 }
 
 .site-header-title {
@@ -1047,20 +1047,16 @@ article.project .project-header {
 }
 
 .site-header-profile-picture {
-  position: absolute;
-  right: 6rem;
-  top: 50%;
-  transform: translateY(-50%);
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  z-index: 1;
+  flex-shrink: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
   .site-header {
-    display: block;
+    flex-direction: column;
     min-height: auto;
     padding: 2rem 1rem;
   }
@@ -1070,10 +1066,7 @@ article.project .project-header {
   }
 
   .site-header-profile-picture {
-    position: static;
-    transform: none;
-    display: block;
-    margin: 1rem auto 0;
+    margin-top: 1rem;
   }
 }
 
