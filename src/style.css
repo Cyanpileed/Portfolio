@@ -54,23 +54,30 @@ body {
 }
 
 .nav-bar {
-  margin: 0 2rem 2rem;
-  max-width: 1400px;
-  min-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 .nav-tabs {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Keeps items inside the white box if space gets tight */
+  gap: 0.5rem;     /* Controls spacing evenly without overflowing */
   list-style: none;
-  padding: 0;
-  margin: 0 0 0 0;
+  padding: 0.5rem 1rem; /* Adds breathing room inside the white pill edges */
+  margin: 0 auto;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: max-height 0.3s ease;
   border-radius: 1rem;
+}
+
+.nav-tabs li a {
+  padding: 0.5rem 1rem; /* Reduces oversized left/right spacing on each link */
+  display: inline-block;
 }
 
 /* Hamburger styles */
@@ -159,40 +166,19 @@ body {
   }
 }
 
-.nav-tabs {
-  flex-direction: row;
-  align-items: center;
-  max-height: none;
-  overflow: visible;
-  width: auto;
-}
-.nav-tabs.open {
-  max-height: none;
-}
-.nav-tabs li {
-  margin: 0 1.5rem;
-  width: auto;
-}
-.nav-tabs a {
-  padding: 1rem 2rem;
-  width: auto;
-  text-align: center;
-}
-.nav-toggle {
-  display: none;
-}
-body.menu-open {
-  overflow-x: hidden;
-}
-
 /* Mobile nav: show burger, collapse menu */
 @media (max-width: 700px) {
+  .site-header {
+    padding-top: 4.5rem; /* Keeps name below the hamburger button */
+  }
+
   .nav-tabs {
     flex-direction: column;
     align-items: flex-start;
     max-height: 0;
+    padding: 0; /* Ensures 0 height when closed so "Home" doesn't peek out */
     overflow: hidden;
-    margin: 0 0 2rem 0;
+    margin: 0;
     width: 100%;
     box-shadow: none;
     border-radius: 0;
@@ -203,8 +189,10 @@ body.menu-open {
     right: 0;
     z-index: 1000;
   }
+
   .nav-tabs.open {
     max-height: 500px;
+    padding: 0.5rem 0; /* Restores padding only when opened */
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   }
   .nav-tabs li {
